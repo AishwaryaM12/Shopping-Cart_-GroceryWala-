@@ -1,8 +1,9 @@
 {
-  "name": "app",
+  "name": "shopping-cart",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node ."
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
