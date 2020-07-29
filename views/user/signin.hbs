@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<style type="text/css">
+		.navbar-collapse.collapse {
+			    display: inline-flex!important;
+			    height: auto!important;
+			    padding-bottom: 0;
+			    overflow: visible!important;
+			}
+		.form{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		    text-align: center;
+		    background-color: white;
+		    background-size: contain;
+		    position: relative;
+			margin: 5% auto;
+			margin-top: 150px;
+		    border-radius: 2px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+			position: relative;
+		    box-sizing: border-box;
+			padding: 50px;
+			width: 400px;
+			height: 400px;
+			color:white;
+
+
+		}
+		.textform{
+			display: flex-inline;
+			flex-wrap: wrap;
+			justify-content: center;
+			
+		}
+		.input{
+			  	  			
+			  width: 250px;
+			  height: 28px;
+			  border: none;
+			  color: black;
+			  border-bottom: 2px solid black;
+			  font-family: 'Roboto', sans-serif;
+			  font-weight: 400;
+			  font-size: 15px;
+			  transition: 0.2s ease;	
+			  background: none; 
+		}
+		.input:focus{
+				  background: none;
+				  border-bottom: 3px solid #16a085;
+				  color: black;
+				  transition: 0.2s ease;
+
+				}
+		
+		body{
+			background-color: lightblue;
+			background-size: cover;
+		}
+		#log{ color: black;
+			font-size: 30px;
+           text-decoration: none;
+           font-family: 'Merriweather', serif;
+       }
+
+		button{
+			width: 250px;
+			text-align: center;
+		}
+		#log:hover{
+			color: #00FF66;
+
+		}
+		#Signup{ 
+			text-decoration: none;
+			color: #00FF66; 
+
+		}
+		h8{
+			color:black;		
+		}
+		
+
+	</style>
+	
+<form class="form" name="myform" method="POST" action="/user/signin"onsubmit="return validate()">
+	<span><a id="log"href="/user/signin">Login</a>
+		{{#if hasErrors}}
+		<div class="alert alert-danger">
+			{{#each messages}}
+				{{this}}
+			{{/each}}
+		</div>
+		{{/if}}
+	<div class="textform">
+	<br>
+	<input class="input email" type="" name="email"placeholder="Email" >
+	<br>
+	<br>
+	<input class="input password" type="password" name="password"placeholder="Password" >
+	<br>
+	<br>
+	<input type="hidden" name="_csrf" value="{{csrfToken}}">
+	<br>
+	<input type="submit" name="button" class="btn btn-warning" value="Login" >
+	
+
+	<br>
+	<br>
+	<h8>Not Registered Yet?Click here for <a id="Signup" href="/user/signup">SignUP</a><h8>
+	</div></span>
+</form>
+<script type="text/javascript" >
+	function validate() {
+
+  var email = document.forms["myform"]["email"].value; 
+    
+  ValidateEmail(email);
+
+
+
+function ValidateEmail(email)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(email.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+return false;
+}
+}
+</script>
+</body>
+</html>

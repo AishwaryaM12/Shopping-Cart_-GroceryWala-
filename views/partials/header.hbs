@@ -1,0 +1,161 @@
+<div class="container"> 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<h3 class="text-left"><img style="height:80px; width:80px;" src="/images/grocerywala.jpg"> Grocerywala</h3>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input style="width:500px;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+         <li class="nav-item dropdown">
+        <a style="color:black;"class="nav-link dropdown-toggle" href="#"style="margin-left:10px;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+         <i class="far fa-user"></i> Users</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        {{# if login}}
+        <a class="dropdown-item" >{{Firstname}} {{session.user.Lastname}}</a>
+        <a class="dropdown-item" href="/user/profile">User Account</a>
+          <a class="dropdown-item" href="/user/logout">Logout</a>
+          {{else}}
+          <a class="dropdown-item" href="/user/signup">Sign Up</a>
+          <a class="dropdown-item" href="/user/signin">Sign In</a>
+        {{/if}}
+          
+        </div>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/shopping-cart"><span class = "badge"> <img style="height:50px; width:50px;" src="https://img.icons8.com/plasticine/100/000000/favorite-cart.png"/>
+         {{session.cart.totalQty}} </span></a>
+
+      </li>
+        
+    </form>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><img style="height:80px; width:80px;" src="/images/staples.jpeg"><span class="sr-only">(current)</span></a>
+        <span style="font-size: 12px;"><strong>Grocery and <br> Staples</strong></span>
+      </li>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><img style="height:80px; width:80px;" src="/images/Household.jpeg"><span class="sr-only">(current)</span></a>
+        <span style="font-size: 12px;"><strong>Household Care</strong></span>
+      </li>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+  <li class="nav-item active">
+        <a class="nav-link" href="#"><img style="height:80px; width:80px;" src="/images/snacks.jpeg"><span class="sr-only">(current)</span></a>
+        <span style="font-size: 12px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snacks</strong></span>
+      </li>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+  <li class="nav-item active">
+        <a class="nav-link" href="#"><img style="height:80px; width:80px;" src="/images/fruits and vegetables.jpeg"><span class="sr-only">(current)</span></a>
+        <span style="font-size: 12px;"><strong>Fruits and <br> Vegetables</strong></span>
+      </li>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+  <li class="nav-item active">
+        <a class="nav-link" href="#"><img style="height:80px; width:80px;" src="/images/Personal.jpeg"><span class="sr-only">(current)</span></a>
+        <span style="font-size: 12px;"><strong>Personal Care</strong></span>
+      </li>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+  <li class="nav-item active">
+        <a class="nav-link" href="#"><img style="height:80px; width:80px;" src="/images/packaged.jpeg"><span class="sr-only">(current)</span></a>
+        <span style="font-size: 12px;"><strong>Packaged Food</strong></span>
+      </li>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+  <li class="nav-item active">
+        <a class="nav-link" href="#"><img style="height:80px; width:80px;" src="/images/baby.jpeg"><span class="sr-only">(current)</span></a>
+        <span style="font-size: 12px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Baby Care</strong></span>
+      </li>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+  <li class="nav-item active">
+        <a class="nav-link" href="#"><img style="height:80px; width:80px;" src="/images/Breakfast.jpeg"><span class="sr-only">(current)</span></a>
+        <span style="font-size: 12px;"><strong>Breakfast and <br> Diary</strong></span>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#"><img style="height:80px; width:80px;" src="/images/Beverages.jpeg"><span class="sr-only">(current)</span></a>
+        <span style="font-size: 12px;"><strong>Beverages</strong></span>
+      </li>
+    </ul>
+
+    </form>
+  </div>
+</nav>
+
+
+
+
+</div>
+
+</html>
+
+<!-- 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">GroceryWala</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav navbar-right">
+    <li class="nav-item">
+          <a class="nav-link" href="/shopping-cart"><i class="fas fa-shopping-cart"></i> Shopping Cart <span class = "badge"> {{session.cart.totalQty}} </span></a>
+
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#"style="margin-left:10px;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+         <i class="far fa-user"></i> Users
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        {{# if login}}
+        <a class="dropdown-item" >{{Firstname}} {{session.user.Lastname}}</a>
+        <a class="dropdown-item" href="/user/profile">User Account</a>
+          <a class="dropdown-item" href="/user/logout">Logout</a>
+          {{else}}
+          <a class="dropdown-item" href="/user/signup">Sign Up</a>
+          <a class="dropdown-item" href="/user/signin">Sign In</a>
+        {{/if}}
+          
+        </div>
+      </li>
+      </ul>
+  </div>
+</nav>
+-->
