@@ -1,5 +1,5 @@
 {
-  "name": "shopping-cart",
+  "name": "app",
   "version": "0.0.0",
   "scripts": {
     "start": "node ."
